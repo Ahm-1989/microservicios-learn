@@ -23,6 +23,7 @@ public class UserServiceImpl implements UserService {
   }
 
   @Override
+  @SuppressWarnings("null")
   public User getUser(String userId) {
     return userRepository.findById(userId)
       .orElseThrow(
