@@ -1,0 +1,76 @@
+{
+	"info": {
+		"_postman_id": "4dea5fd6-55b5-4946-9ca9-ba40afcb0149",
+		"name": "BUSINESS",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "5700885"
+	},
+	"item": [
+		{
+			"name": "users",
+			"item": [
+				{
+					"name": "save user",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Arthur\",\n    \"email\": \"arthur@mail.com\",\n    \"role\": \"isi\",\n    \"information\": \"test de POST element to spring \"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/users",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get all users",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/users",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getOne user",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/users/08b3071b-4a39-4e86-8b2e-4bcf77a586b2",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"users",
+								"08b3071b-4a39-4e86-8b2e-4bcf77a586b2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
