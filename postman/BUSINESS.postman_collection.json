@@ -7,7 +7,7 @@
 	},
 	"item": [
 		{
-			"name": "users",
+			"name": "users-microservice",
 			"item": [
 				{
 					"name": "save user",
@@ -24,9 +24,9 @@
 							}
 						},
 						"url": {
-							"raw": "{{host}}/users",
+							"raw": "{{host}}{{port-user-micro}}/users",
 							"host": [
-								"{{host}}"
+								"{{host}}{{port-user-micro}}"
 							],
 							"path": [
 								"users"
@@ -41,9 +41,9 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{host}}/users",
+							"raw": "{{host}}{{port-user-micro}}/users",
 							"host": [
-								"{{host}}"
+								"{{host}}{{port-user-micro}}"
 							],
 							"path": [
 								"users"
@@ -58,9 +58,9 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{host}}/users/08b3071b-4a39-4e86-8b2e-4bcf77a586b2",
+							"raw": "{{host}}{{port-user-micro}}/users/08b3071b-4a39-4e86-8b2e-4bcf77a586b2",
 							"host": [
-								"{{host}}"
+								"{{host}}{{port-user-micro}}"
 							],
 							"path": [
 								"users",
@@ -71,6 +71,57 @@
 					"response": []
 				}
 			]
+		},
+		{
+			"name": "hotel-microservice",
+			"item": [
+				{
+					"name": "get all hotels",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "create hotel",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Hotel Service Inn\",\n    \"information\": \"The first build to develop created in the logic aolgoritm\",\n    \"ubication\": \"In RAM memory and writing\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}{{port-hotel-micro}}/hotels",
+							"host": [
+								"{{host}}{{port-hotel-micro}}"
+							],
+							"path": [
+								"hotels"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get a hotel",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Calification-microservices",
+			"item": []
 		}
 	]
 }
