@@ -1,11 +1,13 @@
-package com.ratingservice;
+package com.registry.service;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class RatingServiceApplicationTests {
+class RegistryServiceApplicationTests {
 
-
+	@Test
+	void contextLoads() {
+	}
 
 }
