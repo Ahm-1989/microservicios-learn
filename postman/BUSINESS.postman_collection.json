@@ -79,7 +79,16 @@
 					"name": "get all hotels",
 					"request": {
 						"method": "GET",
-						"header": []
+						"header": [],
+						"url": {
+							"raw": "{{host}}{{port-hotel-micro}}/hotels",
+							"host": [
+								"{{host}}{{port-hotel-micro}}"
+							],
+							"path": [
+								"hotels"
+							]
+						}
 					},
 					"response": []
 				},
@@ -90,7 +99,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"name\": \"Hotel Service Inn\",\n    \"information\": \"The first build to develop created in the logic aolgoritm\",\n    \"ubication\": \"In RAM memory and writing\"\n}",
+							"raw": "{\n    \"name\": \"Hotel Service User Hotel Inn\",\n    \"information\": \"The thirth build to develop created in the logic aolgoritm\",\n    \"ubication\": \"In RAM memory into server 2\"\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -113,15 +122,79 @@
 					"name": "get a hotel",
 					"request": {
 						"method": "GET",
-						"header": []
+						"header": [],
+						"url": {
+							"raw": "{{host}}{{port-hotel-micro}}/hotels/1eb6fa86-bebc-4b2e-9c6b-973e973d018",
+							"host": [
+								"{{host}}{{port-hotel-micro}}"
+							],
+							"path": [
+								"hotels",
+								"1eb6fa86-bebc-4b2e-9c6b-973e973d018"
+							]
+						}
 					},
 					"response": []
 				}
 			]
 		},
 		{
-			"name": "Calification-microservices",
-			"item": []
+			"name": "ratings-microservices",
+			"item": [
+				{
+					"name": "Subir calificaciones",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"usuarioId\": \"3\",\n    \"hotelId\": \"5678\",\n    \"calificacion\": 4,\n    \"observaciones\": \"aceptable\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}{{port-ratings-micro}}/calificaciones",
+							"host": [
+								"{{host}}{{port-ratings-micro}}"
+							],
+							"path": [
+								"calificaciones"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "trae calificaciones por usuario",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "trae calificaciones por hotel",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}{{port-ratings-micro}}/ratings/hotels/3",
+							"host": [
+								"{{host}}{{port-ratings-micro}}"
+							],
+							"path": [
+								"ratings",
+								"hotels",
+								"3"
+							]
+						}
+					},
+					"response": []
+				}
+			]
 		}
 	]
 }
