@@ -5,13 +5,13 @@
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>2.7.8</version>
+		<version>3.2.3</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.msvc.ratings</groupId>
-	<artifactId>calificacion-service</artifactId>
+	<artifactId>ratings-service</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>calificacion-service</name>
+	<name>ratings-service</name>
 	<description>Demo project for Spring Boot</description>
 	<properties>
 		<java.version>21</java.version>
