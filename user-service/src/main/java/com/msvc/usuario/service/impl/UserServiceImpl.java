@@ -53,7 +53,7 @@ public class UserServiceImpl implements UserService {
     @SuppressWarnings("unchecked")
     Rating[] ratingOfTheUser = 
       restTemplate.getForObject(
-        "http://localhost:8083/ratings/users/" + user.getUserId(),
+        "http://ratings-service/ratings/users/" + user.getUserId(),
         Rating[].class);
 
       List<Rating> ratings = Arrays.stream(ratingOfTheUser).collect(Collectors.toList());  
@@ -61,7 +61,7 @@ public class UserServiceImpl implements UserService {
       List<Rating> ListOfRatings = ratings.stream().map( rating -> {
         System.out.println(rating.getHotelId());
         ResponseEntity<Hotel> forEntity = 
-        restTemplate.getForEntity("http://localhost:8082/hotels/" + rating.getHotelId(),
+        restTemplate.getForEntity("http://hotel-service/hotels/" + rating.getHotelId(),
         Hotel.class);
         Hotel hotel = forEntity.getBody();
         logger.info("Respuesta con codigo de estado: " + forEntity.getStatusCode());
